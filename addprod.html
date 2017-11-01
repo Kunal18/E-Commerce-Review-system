@@ -1,0 +1,38 @@
+<?php
+session_start();
+$aname=$_SESSION['adname'];
+$password=$_SESSION['adpassword'];
+//echo $aname;
+//echo $password;
+?>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>ADD PRODUCTS</title>
+</head>
+<body>
+<h1>Add Products INFORMATION</h1>
+<pre>
+<form action="insert.php" method="post" enctype="multipart/form-data">
+	
+		Enter Product Name : <input type="text" name="pname" id="pname" width="25">
+
+		Enter Product Type : <input type="text" name="type" id="type" width="25">
+
+		Enter Product Brand: <input type="text" name="brand" id="brand" width="25">
+
+		Enter Description  : <textarea rows="3" cols="22" name="descr" id="descr"></textarea>
+
+		Enter Cost         : <input type="number" name="cost" id="cost">
+
+		Enter Product Image: <input type="file" name="image" id="image"> 	
+
+				<input type="submit" name="submit" value="INSERT PRODUCT">	
+
+	
+</form>
+</pre>
+</body>
+</html>
